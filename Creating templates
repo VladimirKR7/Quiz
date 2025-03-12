@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Platform</title>
+</head>
+<body>
+    <h1>Welcome to the Quiz Platform</h1>
+    <h2>Available Quizzes</h2>
+    <ul>
+        {% for quiz in quizzes %}
+            <li><a href="{{ url_for('quiz', quiz_id=quiz.id) }}">{{ quiz.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
